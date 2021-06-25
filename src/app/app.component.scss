@@ -1,0 +1,102 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+
+  form {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .form-control {
+      position: relative;
+      margin: 10px 0 20px;
+      width: 300px;
+
+      input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px #fff solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0 8px 0;
+        font-size: 16px;
+        color: #fff;
+      }
+      input {
+        outline: 0;
+        &.ng-valid.ng-touched.ng-dirty {
+          border-bottom: 2px lightblue solid;
+        }
+        &.ng-invalid.ng-touched.ng-dirty {
+          border-bottom: 2px lightcoral solid;
+        }
+      }
+
+      input:focus + label, input.ng-dirty.ng-touched + label{
+        transform: translateY(-15px);
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        font-size: 11px;
+      }
+
+      input.ng-valid.ng-touched.ng-dirty + label {
+        color: lightblue;
+      }
+      input.ng-invalid.ng-touched.ng-dirty + label,
+      input.ng-invalid.ng-touched.ng-dirty + span {
+        color: lightcoral;
+      }
+
+      span {
+        font-size: 11px;
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        color: lightcoral;
+
+      }
+
+      label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      display: inline-block;
+      width: 100%;
+      background: lightblue;
+      padding: 15px;
+      font-size: 16px;
+      font-family: inherit;
+      border: 0;
+      border-radius: 5px;
+      margin-top: 40px;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+    button:disabled {
+      background-color: lightgray;
+    }
+
+    button:focus,
+    input:focus {
+      outline: 0;
+    }
+  }
+}

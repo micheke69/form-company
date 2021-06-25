@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost:4200",
+    "ignoreTestFiles": "**/examples/**",
+    "screenshotsFolder": "output/e2e/screenshots"
+
+}
